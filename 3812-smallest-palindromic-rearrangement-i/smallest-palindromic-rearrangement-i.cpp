@@ -1,0 +1,20 @@
+class Solution {
+public:
+    string smallestPalindrome(string s) {
+        int n = s.size();
+        if(n==1) return s;
+        int mid = n/2;
+        sort(s.begin(),s.begin()+mid);
+        if(n%2 == 0){
+            for(int i = 0 ; i<mid; i++){
+                s[n-1-i]=s[i];
+            }
+        }
+        else{
+            for(int i = 0 ; i<mid; i++){
+                s[n-1-i]=s[i];
+            }
+        }
+        return s;
+    }
+};
